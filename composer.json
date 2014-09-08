@@ -78,13 +78,13 @@
         "bin-dir": "bin"
     },
     "extra": {
-        "symfony-app-dir": "ezpublish",
-        "symfony-web-dir": "web",
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "app/web",
         "ezpublish-legacy-dir": "ezpublish_legacy",
         "_symfony-assets-install_comment_": "One of 'symlink', 'relative' (symlinks) or 'hard'",
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
-            "file": "ezpublish/config/parameters.yml"
+            "file": "app/config/parameters.yml"
         }
     }
 }
