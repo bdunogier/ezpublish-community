@@ -14,12 +14,12 @@
     },
     "require": {
         "php": ">=5.3.17",
-        "symfony/symfony": "~2.3",
+        "symfony/symfony": "~2.5",
         "twig/extensions": "~1.0",
         "symfony/assetic-bundle": "~2.3",
         "symfony/swiftmailer-bundle": "~2.3",
-        "symfony/monolog-bundle": "~2.3",
-        "sensio/distribution-bundle": "~2.3",
+        "symfony/monolog-bundle": "~2.4",
+        "sensio/distribution-bundle": "~2.3|~3.0",
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
         "tedivm/stash-bundle": "0.4.*",
@@ -35,9 +35,6 @@
         "doctrine/dbal": "~2.5@rc",
         "doctrine/doctrine-bundle": "~1.3@beta",
         "liip/imagine-bundle": "~1.0"
-    },
-    "conflict": {
-        "symfony/symfony": "2.3.9 | 2.3.14 | 2.3.15"
     },
     "require-dev": {
         "behat/behat": "3.0.*",
@@ -68,7 +65,7 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "eZ\\Bundle\\EzPublishLegacyBundle\\Composer\\ScriptHandler::installAssets",
-            "eZ\\Bundle\\EzPublishCoreBundle\\Composer\\ScriptHandler::dumpAssets",
+            "eZ\\Bundle\\EzPublishCoreBundle\\Composer\\ScriptHandler::dumpAssetsHelpText",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "eZ\\Bundle\\EzPublishLegacyBundle\\Composer\\ScriptHandler::installLegacyBundlesExtensions"
         ]
@@ -81,7 +78,9 @@
         "symfony-app-dir": "app",
         "symfony-web-dir": "app/web",
         "ezpublish-legacy-dir": "ezpublish_legacy",
-        "_symfony-assets-install_comment_": "One of 'symlink', 'relative' (symlinks) or 'hard'",
+        "___ezpublish-asset-dump-env": "To set environment used by dumpAssets script, like 'prod', or 'none' to skip",
+        "ezpublish-asset-dump-env": "",
+        "___symfony-assets-install": "One of 'symlink', 'relative' (symlinks) or 'hard'",
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
