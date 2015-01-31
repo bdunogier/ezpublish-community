@@ -31,12 +31,9 @@ use Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle;
 use Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle;
 use Sensio\Bundle\DistributionBundle\SensioDistributionBundle;
 use Tedivm\StashBundle\TedivmStashBundle;
-use WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle;
-use WhiteOctober\BreadcrumbsBundle\WhiteOctoberBreadcrumbsBundle;
 use Nelmio\CorsBundle\NelmioCorsBundle;
 use Hautelook\TemplatedUriBundle\HautelookTemplatedUriBundle;
 use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
-use Knp\Bundle\MenuBundle\KnpMenuBundle;
 use Oneup\FlysystemBundle\OneupFlysystemBundle;
 use Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle;
 
@@ -71,13 +68,10 @@ class EzPublishKernel extends Kernel
             new EzSystemsNgsymfonytoolsBundle(),
             new EzSystemsPlatformUIAssetsBundle(),
             new EzSystemsPlatformUIBundle(),
-            new WhiteOctoberPagerfantaBundle(),
-            new WhiteOctoberBreadcrumbsBundle(),
             new NelmioCorsBundle(),
-            new KnpMenuBundle(),
             new OneupFlysystemBundle(),
-            new EzSystemsPlatformInstallerBundle(),
-            new AcmeEzPlatformDefaultSiteBundle(),
+            new EzSystems\PlatformInstallerBundle\EzSystemsPlatformInstallerBundle(),
+            new Acme\EzPlatformDefaultSiteBundle\AcmeEzPlatformDefaultSiteBundle(),
         );
 
         switch ( $this->getEnvironment() )
