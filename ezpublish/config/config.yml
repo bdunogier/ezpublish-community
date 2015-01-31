@@ -57,3 +57,15 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+# Doctrine DBAL configuration
+doctrine:
+    dbal:
+        connections:
+            default:
+                driver: %database_driver%
+                host: %database_host%
+                user: %database_user%
+                password: %database_password%
+                dbname: %database_name%
+                charset: UTF8
