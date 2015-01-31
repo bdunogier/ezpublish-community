@@ -13,7 +13,6 @@ use eZ\Bundle\EzPublishDebugBundle\EzPublishDebugBundle;
 use eZ\Bundle\EzPublishIOBundle\EzPublishIOBundle;
 use eZ\Bundle\EzPublishRestBundle\EzPublishRestBundle;
 use EzSystems\CommentsBundle\EzSystemsCommentsBundle;
-use EzSystems\DemoBundle\EzSystemsDemoBundle;
 use EzSystems\BehatBundle\EzSystemsBehatBundle;
 use eZ\Bundle\EzPublishCoreBundle\Kernel;
 use EzSystems\NgsymfonytoolsBundle\EzSystemsNgsymfonytoolsBundle;
@@ -67,7 +66,6 @@ class EzPublishKernel extends Kernel
             new FOSHttpCacheBundle(),
             new EzPublishCoreBundle(),
             new EzPublishIOBundle(),
-            new EzSystemsDemoBundle(),
             new EzPublishRestBundle(),
             new EzSystemsCommentsBundle(),
             new EzSystemsNgsymfonytoolsBundle(),
