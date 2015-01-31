@@ -76,6 +76,7 @@ class EzPublishKernel extends Kernel
             new NelmioCorsBundle(),
             new KnpMenuBundle(),
             new OneupFlysystemBundle(),
+            new EzSystemsPlatformInstallerBundle(),
             new AcmeEzPlatformDefaultSiteBundle(),
         );
 
