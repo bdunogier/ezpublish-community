@@ -1,0 +1,4 @@
+services:
+#    acme_ez_platform_default_site.example:
+#        class: Acme\EzPlatformDefaultSiteBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

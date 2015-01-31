@@ -1,0 +1,8 @@
+system:
+    default:
+        location_view:
+            full:
+                root_location:
+                    template: "AcmeEzPlatformDefaultSiteBundle:full:root_location.html.twig"
+                    match:
+                        Id\Location: [2]
