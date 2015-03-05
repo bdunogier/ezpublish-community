@@ -11,13 +11,11 @@ use Egulias\ListenersDebugCommandBundle\EguliasListenersDebugCommandBundle;
 use eZ\Bundle\EzPublishCoreBundle\EzPublishCoreBundle;
 use eZ\Bundle\EzPublishDebugBundle\EzPublishDebugBundle;
 use eZ\Bundle\EzPublishIOBundle\EzPublishIOBundle;
-use eZ\Bundle\EzPublishLegacyBundle\EzPublishLegacyBundle;
 use eZ\Bundle\EzPublishRestBundle\EzPublishRestBundle;
 use EzSystems\CommentsBundle\EzSystemsCommentsBundle;
 use EzSystems\DemoBundle\EzSystemsDemoBundle;
 use EzSystems\BehatBundle\EzSystemsBehatBundle;
 use eZ\Bundle\EzPublishCoreBundle\Kernel;
-use EzSystems\NgsymfonytoolsBundle\EzSystemsNgsymfonytoolsBundle;
 use EzSystems\PlatformUIBundle\EzSystemsPlatformUIBundle;
 use EzSystems\PlatformUIAssetsBundle\EzSystemsPlatformUIAssetsBundle;
 use FOS\HttpCacheBundle\FOSHttpCacheBundle;
@@ -41,6 +39,7 @@ use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
 use Knp\Bundle\MenuBundle\KnpMenuBundle;
 use Oneup\FlysystemBundle\OneupFlysystemBundle;
 use Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle;
+use EzSystems\PlatformInstallerBundle\EzSystemsPlatformInstallerBundle;
 
 class EzPublishKernel extends Kernel
 {
@@ -67,19 +66,18 @@ class EzPublishKernel extends Kernel
             new LiipImagineBundle(),
             new FOSHttpCacheBundle(),
             new EzPublishCoreBundle(),
-            new EzPublishLegacyBundle( $this ),
             new EzPublishIOBundle(),
             new EzSystemsDemoBundle(),
             new EzPublishRestBundle(),
             new EzSystemsCommentsBundle(),
-            new EzSystemsNgsymfonytoolsBundle(),
             new EzSystemsPlatformUIAssetsBundle(),
             new EzSystemsPlatformUIBundle(),
             new WhiteOctoberPagerfantaBundle(),
             new WhiteOctoberBreadcrumbsBundle(),
             new NelmioCorsBundle(),
             new KnpMenuBundle(),
-            new OneupFlysystemBundle()
+            new OneupFlysystemBundle(),
+            new EzSystemsPlatformInstallerBundle()
         );
 
         switch ( $this->getEnvironment() )
